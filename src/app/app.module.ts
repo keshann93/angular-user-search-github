@@ -1,20 +1,32 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ProfileComponent } from './components/profile/profile.component';
-import { ReadmeComponent } from './components/readme/readme.component';
-import { SearchComponent } from './components/search/search.component';
-import { AppComponent } from './app.component';
-import { HttpModule } from '@angular/http'
+import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { MarkdownModule } from 'ngx-markdown';
+import { MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
+import {ProfileComponent, ReadmeComponent, SearchComponent} from './components' ;
+
+import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {GithubService} from './services/github.services';
 
 @NgModule({
-  imports: [AppRoutingModule, BrowserModule, HttpModule, FormsModule, MarkdownModule.forRoot()],
-  declarations: [AppComponent, ProfileComponent, SearchComponent, ReadmeComponent],
-  bootstrap: [AppComponent],
+  declarations: [
+    AppComponent,
+    ProfileComponent,
+    ReadmeComponent,
+    SearchComponent
+  ],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    HttpModule,
+    FormsModule,
+    MarkdownModule
+  ],
+  providers: [GithubService, MarkdownService, MarkedOptions],
   exports: [
     AppRoutingModule
-  ]
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
