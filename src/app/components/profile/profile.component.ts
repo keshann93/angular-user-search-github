@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { GithubService } from '../../services/github.services';
 @Component({
-    moduleId : module.id,
+    moduleId: module.id,
     selector: 'app-profile',
     templateUrl: './profile.component.html',
     styleUrls: ['./profile.component.css']
@@ -24,21 +24,21 @@ export class ProfileComponent implements OnInit {
         this.route.queryParams.subscribe((v: any) => {
             this.userName = v.userName;
         });
-        this._githubService.getUser().subscribe(user => {
+        this._githubService.getUser(this.userName).subscribe(user => {
             console.log(user);
             this.user = user;
         });
 
-        this._githubService.getRepos().subscribe(repos => {
+        this._githubService.getRepos(this.userName).subscribe(repos => {
             console.log(repos);
             this.repos = repos;
         });
     }
     goSearch() {
-        this.router.navigate(['/search']);
+        this.router.navigate(['/angular-user-search-github/search']);
     }
-    readmeFun(name: string){
-        this.router.navigate(['/readme'], {queryParams: {repoName: name}})
+    readmeFun(name: string) {
+        this.router.navigate(['/angular-user-search-github/readme'], { queryParams: { repoName: name, userName: this.userName } });
     }
 
 }

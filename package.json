@@ -11,7 +11,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "npm run build & gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
