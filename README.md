@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Demo
 
-`https://keshshan.github.io/angular-user-search-github/`
+https://keshshan.github.io/angular-user-search-github/
 
 ## What is this?
 
