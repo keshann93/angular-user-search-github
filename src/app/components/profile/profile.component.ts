@@ -35,10 +35,10 @@ export class ProfileComponent implements OnInit {
         });
     }
     goSearch() {
-        this.router.navigate(['/angular-user-search-github/search']);
+        this.router.navigate(['/search']);
     }
     readmeFun(name: string) {
-        this.router.navigate(['/angular-user-search-github/readme'], { queryParams: { repoName: name, userName: this.userName } });
+        this.router.navigate(['/readme'], { queryParams: { repoName: name, userName: this.userName } });
     }
 
 }

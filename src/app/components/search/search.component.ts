@@ -16,7 +16,7 @@ export class SearchComponent {
 
     searchUser() {
         this._githubService.updateUsername(this.userName);
-        this.router.navigate(['/angular-user-search-github/profile'], {queryParams: {userName: this.userName}})
+        this.router.navigate(['/profile'], {queryParams: {userName: this.userName}});
 
     }
 

@@ -18,9 +18,9 @@ export class GithubService {
         this.userName = '';
         this.clientId = '60b9f23dedffbdfc476c';
         this.clientSecret = 'd1c186c6373f96571c0bfcf76b84e4dc6fd0c15a';
-        this.getUserUrl = 'http://api.github.com/users/[userName]?client_id=[clientId]&client_secret=[clientSecret]';
-        this.getRepoUrl = 'http://api.github.com/users/[userName]/repos?client_id=[clientId]&client_secret=[clientSecret]';
-        this.getReadmeUrl = 'http://api.github.com/repos/[userName]/[repo]/readme?client_id=[clientId]&client_secret=[clientSecret]'
+        this.getUserUrl = 'https://api.github.com/users/[userName]?client_id=[clientId]&client_secret=[clientSecret]';
+        this.getRepoUrl = 'https://api.github.com/users/[userName]/repos?client_id=[clientId]&client_secret=[clientSecret]';
+        this.getReadmeUrl = 'https://api.github.com/repos/[userName]/[repo]/readme?client_id=[clientId]&client_secret=[clientSecret]';
     }
 
     getUser(userName) {
