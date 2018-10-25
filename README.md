@@ -15,7 +15,7 @@ Run `npm run start | ng serve` for a dev server. Navigate to `http://localhost:4
 
 Run `npm run build | ng build --prod` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-##gh-pages
+## gh-pages
 
 GH-Pages is integrated. Run `npm run deploy` to build the project and deploy to the github pages.
 
